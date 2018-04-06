@@ -1,2 +1,5 @@
 class YearController < ApplicationController
+  def index
+    @years = Year.all 
+  end 
 end
