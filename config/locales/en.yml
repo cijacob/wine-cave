@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  Choose_by_color: Choose by color
+  Choose_by_year: Choix by year
+  login: Login
+  signin: Sign in
+  wine_cave: My personnal wine cave
+  Choose_your_year: Choose your wine per year
+  Choose_colors: Choose your wine per colour
+

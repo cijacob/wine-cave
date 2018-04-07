@@ -3,7 +3,7 @@
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">My Site</a></h1>
+      <h1><a href="#"><%= t :wine_cave %></a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -11,23 +11,23 @@
 
   <section class="top-bar-section">
     <ul class="right">
-      <li class="active"><a href="#">Login</a></li>
-      <li class="active"><a href="#">Sign in</a></li>
+      <li class="active"><a href="#"><%= t :login %></a></li>
+      <li class="active"><a href="#"><%= t :signin%></a></li>
       <li class="has-dropdown">
         <a href="#">Language</a>
         <ul class="dropdown">
-          <li class="active"><%= link_to "French", locale: "fr" %></li>
-          <li><%= link_to "Nederlands", locale: "nl" %></li>
-          <li><%= link_to "English", locale: "en" %></li>
+          <li class="active"><%= link_to t('.French'), locale: "fr" %></li>
+          <li><%= link_to t('.Nederlands'), locale: "nl" %></li>
+          <li><%= link_to t('.English'), locale: "en" %></li>
         </ul>
       </li>
     </ul>
     <ul class="left">
     <li>
-      <%= link_to "Choose by color", colors_path %>
+      <%= link_to t("Choose_by_color"), colors_path %>
     </li>
     <li>
-      <%= link_to "Choose by year", year_path %>
+      <%= link_to t('Choose_by_year'), year_path %>
     </li>
     </ul>
   </section>
