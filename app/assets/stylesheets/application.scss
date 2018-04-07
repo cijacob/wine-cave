@@ -1,8 +1,27 @@
 @import "foundation_and_overrides";
-
+$dark-gray :#363636; 
+$medium-gray: #595959;
+$light-gray: #a6a6a6;
+$corall: #ff7f50;
 h4{
   text-align: center; 
   font-weight: 200; 
-  color: coral; 
+  color: $corall; 
   padding: 15px 0;  
+}
+.footer{  
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0; 
+  width: 100%; 
+  h3{
+    color: antiquewhite;
+  }
+  p{
+    color: antiquewhite;
+    font-size: 12px; 
+  }
 }
