@@ -1,7 +1,9 @@
+@import "font-awesome";
 @import "foundation_and_overrides";
-$dark-gray :#363636; 
+
+$dark-gray :#495057; 
 $medium-gray: #595959;
-$light-gray: #a6a6a6;
+$light-gray: #868e96;
 $corall: #ff7f50;
 h4{
   text-align: center; 
@@ -10,18 +12,31 @@ h4{
   padding: 15px 0;  
 }
 .footer{  
-  background-color: #292c2f;
+  background-color: $dark-gray;
   text-align: center;
   font-size: 1.2rem;
   padding: 1rem;
   position: absolute;
   bottom: 0; 
-  width: 100%; 
+  width: 100%;
   h3{
-    color: antiquewhite;
+    color: $light-gray;
   }
   p{
-    color: antiquewhite;
+    color: $light-gray;
     font-size: 12px; 
+  }
+  li{
+    list-style: none; 
+  }
+  a{
+    color: $light-gray;
+    font-size: 12px; 
+  }
+}
+.container.homepage-index{
+  margin-top: 70px; 
+  .columns{
+    height: 250px; 
   }
 }
