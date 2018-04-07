@@ -1,0 +1,2 @@
+class Cepage < ApplicationRecord
+end
