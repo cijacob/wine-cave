@@ -1,4 +1,8 @@
-<h4> Choose your year </h4>
+<h4><%= t :Choose_your_year %></h4>
+
+
 <% @years.each do |y| %>
   <button><%= y.year %></button>
 <% end %>
+
+<%= link_to "Back to homepage", root_path %>
