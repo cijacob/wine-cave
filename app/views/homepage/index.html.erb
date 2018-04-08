@@ -1,20 +1,28 @@
 <div class="container homepage-index">
     <div class="row">
-        <div class="columns small-6" style="background-color:aqua">
-           <img src="" alt="">
+        <div class="columns small-6">
+            <div class="block-hp-choice">
+                <%= image_tag("fles_left.png",  :alt => "rss feed") %>
+            </div>
         </div>
         <div class="columns small-6" style="background-color:bisque">
-          <p>Accedez a ma carte de vin</p>
-          <%= link_to 'Acceder', root_path %>
+            <div class="block-hp-choice">
+                <p>Accedez a ma carte de vin</p>
+                <%= link_to 'Acceder', root_path %>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="columns small-6" style="background-color:bisque">
-            <p>Accedez a ma carte de vin </p>
-            <%= link_to 'Acceder', root_path %>
+            <div class="block-hp-choice">
+               <p>Enrichir ma cave </p>
+                <%= link_to 'Acceder', root_path %> 
+            </div>
         </div>
-        <div class="columns small-6" style="background-color:aqua">
-            <img src="" alt="">
+        <div class="columns small-6">
+            <div class="block-hp-choice">
+                <%= image_tag("fles_right.png",  :alt => "rss feed") %>
+            </div>
         </div>
     </div>
 </div>
