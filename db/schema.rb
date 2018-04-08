@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180408060503) do
+ActiveRecord::Schema.define(version: 20180408123451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20180408060503) do
 
   create_table "colors", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "land_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,10 +52,9 @@ ActiveRecord::Schema.define(version: 20180408060503) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "land_id"
     t.integer "year_id"
-    t.integer "domain_id"
     t.integer "color_id"
+    t.integer "country_id"
   end
 
   create_table "years", force: :cascade do |t|
