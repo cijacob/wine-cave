@@ -3,10 +3,14 @@ Rails.application.routes.draw do
   get 'homepage/index'
   get 'colors' => "colors#index"
   get 'years' => 'years#index'
-  get '/:locale' => 'homepage#index'
+  get 'wines' => 'wines#index'
 
+  
+  resources :colors do 
+    resources :wines
+  end 
   scope "(:locale)", locale: /en|fr/ do
     resources :years
   end
-  
+  get '/:locale' => 'homepage#index'
 end
