@@ -5,6 +5,15 @@ $dark-gray :#495057;
 $medium-gray: #595959;
 $light-gray: #868e96;
 $corall: #ff7f50;
+$cube-height: 40px;
+
+*{
+  font-family: 'Titillium Web', sans-serif;
+}
+.top-bar a,
+.top-bar-section ul li > a{
+  font-family: 'Titillium Web', sans-serif;
+}
 h4{
   text-align: center; 
   font-weight: 200; 
@@ -27,7 +36,9 @@ h4{
     font-size: 12px; 
   }
   li{
-    list-style: none; 
+    list-style: none;
+    color: $light-gray;
+    font-size: 12px; 
   }
   a{
     color: $light-gray;
@@ -41,6 +52,9 @@ h4{
     height: 250px; 
   }
 }
+.column_second, .column_third{
+  background-color: rgba(255, 228, 196, 0.3);
+}
 .block-hp-choice{
   display: block;
   text-align: center;  
@@ -51,11 +65,49 @@ h4{
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+.button_container{
+  width: 100%; 
+}
+.container_cube{
+  top: 70%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+  z-index: 1;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0;
+  width: 200px;
+  height: $cube-height;
+  text-align: center;
+}
+.container_cube{
+  width: 200px;
+  height: $cube-height;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.inner_cube{
+  border: 1px solid #fdad59;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height:$cube-height;
+  height: 100%;
+}
+.inner_cube a{
+  color: #fdad59;
+  font-size: 20px;
+  letter-spacing: 5px;
+  padding: 0 30px;
+}
+.container_cube:hover{
+  .inner_cube{
+    border: 1px solid #daa37f;
+  }
   a{
-    margin: 0;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-60%, -50%);
+    color: #daa37f; 
   }
 }
