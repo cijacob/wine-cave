@@ -1,4 +1,4 @@
-class YearController < ApplicationController
+class YearsController < ApplicationController
   def index
     @years = Year.all 
   end 
