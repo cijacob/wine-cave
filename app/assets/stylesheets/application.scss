@@ -111,3 +111,25 @@ h4{
     color: #daa37f; 
   }
 }
+div.left_block{
+  animation: leftToRight 1.5s ease-in; 
+}
+div.right_block{
+  animation: rightToLeft 1.5s ease-in; 
+}
+@keyframes rightToLeft{
+  0% {
+    transform: translateX(250px);
+  }
+  100% {
+     transform: translateX(0px); 
+  }
+}
+@keyframes leftToRight{
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+     transform: translateX(0px); 
+  }
+}
