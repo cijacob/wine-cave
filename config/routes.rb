@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'homepage/index'
   get 'colors' => "colors#index"
   get 'years' => 'years#index'
-  get 'wines' => 'wines#index'
 
+  resources :wines 
   
   resources :colors do 
     resources :wines
