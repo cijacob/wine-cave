@@ -1,6 +1,15 @@
 <h4><%= t :add_new_wine %><h4>
 
 <%= form_for @wine do |w| %>
-
-
+  <p>
+    <%= w.label :name %>
+    <%= w.text_field :name %>
+  </p>
+  <p>
+    <%= w.label :description %>
+    <%= w.text_area :description %>
+  </p>
+  <span class="btn btn_submit">
+    <%= w.submit %>
+  <span>
 <% end %>

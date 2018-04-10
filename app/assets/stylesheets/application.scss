@@ -133,3 +133,23 @@ div.right_block{
      transform: translateX(0px); 
   }
 }
+
+.btn_submit input{
+  background-color: transparent; 
+  border: 1px solid #fdad59;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height:$cube-height;
+  height: 100%;
+  animation: submit 2s ease-out; 
+  width: 100px; 
+  border-radius: 5px; 
+}
+@keyframes submit {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+     transform: translateY(0px); 
+  }
+}
