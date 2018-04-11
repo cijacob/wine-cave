@@ -144,7 +144,9 @@ div.right_block{
   animation: submit 2s ease-out; 
   width: 100px; 
   border-radius: 5px; 
+  cursor: pointer; 
 }
+
 @keyframes submit {
   0% {
     transform: translateY(100px);
