@@ -6,5 +6,7 @@ class Wine < ApplicationRecord
   belongs_to :color
   belongs_to :year
   belongs_to :country
+
+  accepts_nested_attributes_for :color, :year, :country, :domain, allow_destroy: true
 end
  

@@ -1,3 +1,14 @@
-<h3>PLus de details concernant ce vin</h3>
+<div class="portfolio-resume-scrolling-container row">
+  <div class="columns small-12 medium-5 portfolio-resume-overview">
+    <div class="portfolio-resume-overview-content">
+      <h3 class="portfolio-resume-name"><%= @wine.name %></h3>
+      <p><%= @wine.description %></p>
+    </div>
+  </div>
+  <div class="columns small-12 medium-7 portfolio-resume-scrolling">
+    <h3><%= @wine.country%></h3>
+    <ul class="portfolio-resume-side-list">
+    </ul>
+  </div>
+</div>
 
-<%= @wine.name %>

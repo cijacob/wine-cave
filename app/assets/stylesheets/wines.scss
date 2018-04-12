@@ -1,3 +1,53 @@
-// Place all the styles related to the wines controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$portfolio-resume-scrolling-container-height: 400px;
+$portfolio-resume-scrolling-container-content-width: 300px;
+$portfolio-resume-scrolling-container-padding: 10px;
+
+$dark-gray :#495057; 
+$medium-gray: #595959;
+$light-gray: #868e96;
+$corall: #ff7f50;
+$cube-height: 40px;
+
+.portfolio-resume-scrolling-container {
+  margin-top:100px; 
+  height: $portfolio-resume-scrolling-container-height;
+  border: 1px solid $medium-gray;
+}
+.portfolio-resume-overview {
+  height: $portfolio-resume-scrolling-container-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 1;
+  z-index: 0;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://picsum.photos/200/300/?blur');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+  }
+}
+
+.portfolio-resume-overview-content {
+  max-width: $portfolio-resume-scrolling-container-content-width;
+  z-index: 1;
+}
+
+.portfolio-resume-scrolling {
+  padding-top: $portfolio-resume-scrolling-container-padding;
+  padding-bottom: $portfolio-resume-scrolling-container-padding;
+
+  /*@include breakpoint(medium) {
+    height: $portfolio-resume-scrolling-container-height;
+    overflow-y: auto;
+  }*/
+}
+
