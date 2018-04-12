@@ -10,7 +10,12 @@ class WinesController < ApplicationController
   def create 
     #render plain: params[:wine].inspect
     @wine = Wine.new(wine_params)
-    redirect_to wines_path(@wine) if @wine.save
+    if @wine.save
+      redirect_to wines_path(@wine) 
+      flash[:notice] = "new wine successfully added to your cart"
+    else 
+      render 'new'
+    end
   end 
 
   def show
