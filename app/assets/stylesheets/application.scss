@@ -118,6 +118,10 @@ div.left_block{
 div.right_block{
   animation: rightToLeft 1.5s ease-in; 
 }
+.container{
+  max-width:1040px; 
+  margin: auto; 
+}
 @keyframes rightToLeft{
   0% {
     transform: translateX(450px);
@@ -136,12 +140,14 @@ div.right_block{
 }
 
 .btn_submit input{
+  margin-top: 30px; 
   background-color: transparent; 
   border: 1px solid #fdad59;
   text-transform: uppercase;
   font-weight: 300;
   line-height:$cube-height;
   height: 100%;
+  -webkit-animation: submit 2s ease-out; 
   animation: submit 2s ease-out; 
   width: 100px; 
   border-radius: 5px; 
@@ -150,9 +156,11 @@ div.right_block{
 
 @keyframes submit {
   0% {
-    transform: translateY(100px);
+    transform: translateY(-30px);
+    opacity: 0; 
   }
   100% {
      transform: translateY(0px); 
+     opacity: 1; 
   }
 }

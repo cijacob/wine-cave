@@ -9,10 +9,12 @@
     <%= w.label :description %>
     <%= w.text_area :description %>
   </p>
-  <select>
-    <%= w.label :color %>
-    <%= w.text_field :wine.color %>
-  </select>
+  <%= w.fields_for :colors do |c| %>
+    <% color_array = Color.all.map { |cl| [cl.name, cl.id] } %>
+    <%= options_for_select(color_array) %>
+  <% end %>
+
+  
   <span class="btn btn_submit">
     <%= w.submit %>
   <span>

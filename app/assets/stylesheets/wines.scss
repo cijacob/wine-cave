@@ -9,10 +9,13 @@ $corall: #ff7f50;
 $cube-height: 40px;
 
 .portfolio-resume-scrolling-container {
+  position: relative; 
   margin-top:100px; 
   height: $portfolio-resume-scrolling-container-height;
-  border: 1px solid $medium-gray;
+  border: 1px solid $light-gray;
+  box-shadow: 0 10px 6px -6px #777;
 }
+
 .portfolio-resume-overview {
   height: $portfolio-resume-scrolling-container-height;
   display: flex;
@@ -28,11 +31,22 @@ $cube-height: 40px;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('https://picsum.photos/200/300/?blur');
+    background-image: url('https://picsum.photos/200/300/');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.5;
     z-index: 0;
+  }
+  .portfolio-resume-overview-content{
+    background-color: rgba(255, 255, 255, 0.5);  
+    opacity: 0.5; 
+    padding: 10px 30px;
+  }
+  .portfolio-resume-name{
+    font-weight: 700;
+    font-style: italic; 
+    font-stretch: condensed; 
+    text-transform: capitalize; 
   }
 }
 
@@ -40,11 +54,25 @@ $cube-height: 40px;
   max-width: $portfolio-resume-scrolling-container-content-width;
   z-index: 1;
 }
+.portfolio-resume-side-list{
+  li{
+    list-style: none;
+  }
+  span{
+    font-weight: 300; 
+    color: $dark-gray; 
+    padding-left: 30px; 
+  }
+}
 
 .portfolio-resume-scrolling {
   padding-top: $portfolio-resume-scrolling-container-padding;
   padding-bottom: $portfolio-resume-scrolling-container-padding;
-
+  h3{
+    color: $corall; 
+    font-weight: 200; 
+    margin: 30px 0 10px 45px; 
+  }
   /*@include breakpoint(medium) {
     height: $portfolio-resume-scrolling-container-height;
     overflow-y: auto;

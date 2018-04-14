@@ -6,8 +6,11 @@
     </div>
   </div>
   <div class="columns small-12 medium-7 portfolio-resume-scrolling">
-    <h3><%= @wine.country%></h3>
+    <h3><%= @wine.country.name %></h3>
     <ul class="portfolio-resume-side-list">
+     <li><span>Domaine: </span><%= @wine.domain.name %></li>
+     <li><span>Couleur: </span><%= @wine.color.name %></li>
+     <li><span>Année: </span><%= @wine.year.year %></li>
     </ul>
   </div>
 </div>
