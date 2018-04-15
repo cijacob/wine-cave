@@ -7,7 +7,11 @@ $medium-gray: #595959;
 $light-gray: #868e96;
 $corall: #ff7f50;
 $cube-height: 40px;
-
+body{
+  height: auto; 
+  padding-bottom: 200px;
+  background-image: url('/images/bg-wine.jpg')
+}
 *{
   font-family: 'Titillium Web', sans-serif;
 }
@@ -21,14 +25,18 @@ h4{
   color: $corall; 
   padding: 15px 0;  
 }
+.container{
+  min-height: 560px; 
+}
 .footer{  
   background-color: $dark-gray;
   text-align: center;
   font-size: 1.2rem;
   padding: 1rem;
   bottom: 0; 
+  position: absolute; 
   width: 100%;
-  position: absolute;
+  margin-bottom: -140px; 
   h3{
     color: $light-gray;
   }
@@ -45,6 +53,9 @@ h4{
     color: $light-gray;
     font-size: 12px; 
   }
+}
+.container{
+  height: 100%; 
 }
 .container.homepage-index{
   margin-top: 70px;
