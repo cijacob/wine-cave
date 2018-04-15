@@ -1,6 +1,16 @@
 <h4><%= t :add_new_wine %><h4>
 
 <%= form_for @wine do |w| %>
+  
+  <% if @wine.errors.any? %>
+    <div class="alert">
+      <ul>
+        <% @wine.errors.full_messages.each do |message| %>
+          <li><%= messsage %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <p>
     <%= w.label :name %>
     <%= w.text_field :name %>
@@ -9,12 +19,12 @@
     <%= w.label :description %>
     <%= w.text_area :description %>
   </p>
-  <%= w.fields_for :colors do |c| %>
-    <% color_array = Color.all.map { |cl| [cl.name, cl.id] } %>
-    <%= options_for_select(color_array) %>
-  <% end %>
+  <%= w.collection_select(:color_id, Color.all, :id, :name) %>
+  <%= w.collection_select(:year_id, Year.all, :id, :year) %>
+  <%= w.collection_select(:country_id, Country.all, :id, :name) %>
+  <%= w.collection_select(:domain_id, Domain.all, :id, :name) %>
 
-  
+
   <span class="btn btn_submit">
     <%= w.submit %>
   <span>
