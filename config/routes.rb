@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get 'colors' => "colors#index"
   get 'years' => 'years#index'
 
-  resources :wines 
+  resources :wines, :countries
   
+  resources :lands do 
+    resources :countries
+  end 
   resources :colors do 
     resources :wines
   end 

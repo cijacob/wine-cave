@@ -12,6 +12,6 @@ class CountriesController < ApplicationController
   private 
 
   def country_params
-    params.require(:wine).permit(:name, lands_attributes: [:id, :name])
+    params.require(:wine).permit(:name, :land_id)
   end 
 end

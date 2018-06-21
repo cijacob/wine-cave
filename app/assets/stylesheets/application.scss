@@ -10,10 +10,19 @@ $cube-height: 40px;
 body{
   height: auto; 
   padding-bottom: 200px;
-  background-image: url('/images/bg-wine.jpg')
 }
 *{
   font-family: 'Titillium Web', sans-serif;
+}
+.top-bar{
+  height: 90px; 
+  line-height: 90px;
+}
+.top-bar .name h1,
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section li.active:not(.has-form) a:not(.button){
+  height: 90px; 
+  line-height: 90px;
 }
 .top-bar a,
 .top-bar-section ul li > a{
@@ -54,10 +63,8 @@ h4{
     font-size: 12px; 
   }
 }
-.container{
-  height: 100%; 
-}
-.container.homepage-index{
+
+.container-homepage-index{
   margin-top: 70px;
   display: grid;
   .columns{
