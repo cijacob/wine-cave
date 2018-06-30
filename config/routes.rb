@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'years' => 'years#index'
 
   resources :wines, :countries
-  
+  resources :users
   resources :lands do 
     resources :countries
   end 
